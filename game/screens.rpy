@@ -473,13 +473,15 @@ screen navigation():
 
             textbutton _("Настройки") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-            #textbutton _("About") action ShowMenu("about")
+            textbutton _("Выйти Из Игры") action Quit(confirm=not main_menu)
+
+            if renpy.variant("pc"):
 
                 ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Помощь") action Help("README.html")
+                textbutton _("Помощь") action Help("README.html")
 
                 ## The quit button is banned on iOS and unnecessary on Android.
-            textbutton _("Выйти Из Игры") action Quit(confirm=not main_menu)
+                
         else:
             timer 1.75 action Start("autoload_yurikill")
 

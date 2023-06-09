@@ -1,6 +1,3 @@
-## splash screen is first thing that gets shown to player
-
-# disclaimers
 init python:
     menu_trans_time = 1
 
@@ -198,64 +195,7 @@ image tos = "bg/warning.png"
 image tos2 = "bg/warning2.png"
 
 
-#init python:
-#    if not persistent.do_not_delete:
-
-#        import os
-#        try:
-#            if not os.access(config.basedir + "/characters/", os.F_OK):
-#                os.mkdir(config.basedir + "/characters")
-
-#            if persistent.playthrough <= 2:
-#                try: renpy.file("../characters/monika.chr")
-#                except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-#            if persistent.playthrough <= 1 or persistent.playthrough == 4:
-#                try: renpy.file("../characters/natsuki.chr")
-#                except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-#                try: renpy.file("../characters/yuri.chr")
-#                except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-#            if persistent.playthrough == 0 or persistent.playthrough == 4:
-#                try: renpy.file("../characters/sayori.chr")
-#                except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
-
-#        except:
-#            pass
-
-
 label splashscreen:
-
-
-    python:
-        firstrun = ""
-        try:
-            firstrun = renpy.file("firstrun").read(1)
-        except:
-            with open(config.basedir + "/game/firstrun", "wb") as f:
-                pass
-    if not firstrun:
-        if persistent.first_run and not persistent.do_not_delete:
-            $ quick_menu = False
-            scene black
-            menu:
-                "Предыдущий файл сохранения был найден. Хотите ли вы удалить текущие данные и начать всё заново?"
-                "Да, удалить все существующие данные.":
-                    "Удаление...{nw}"
-                    python:
-                        #delete_all_saves()
-                        renpy.loadsave.location.unlink_persistent()
-                        renpy.persistent.should_save_persistent = False
-                        renpy.utter_restart()
-                "Нет, продолжить там же.":
-                    pass
-
-        python:
-            if not firstrun:
-                with open(config.basedir + "/game/firstrun", "w") as f:
-                    f.write("1")
-            filepath = renpy.file("firstrun").name
-            open(filepath, "a").close()
-
-
     default persistent.first_run = False
     if not persistent.first_run:
         $ quick_menu = False

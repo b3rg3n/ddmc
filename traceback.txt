@@ -1,28 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/advanced_scripts/script-poemgame.rpy", line 8, in script
-    init python:
-  File "game/advanced_scripts/script-poemgame.rpy", line 35, in <module>
-    full_wordlist[x[0]] = PoemWord(int(x[1]), int(x[2]), int(x[3]))
-TypeError: list indices must be integers or slices, not str
+  File "game/splash.rpy", line 2, in script
+    init -100 python:
+  File "game/splash.rpy", line 7, in <module>
+    renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
+Exception: DDLC archive files not found in /game folder. Check installation and try again.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/advanced_scripts/script-poemgame.rpy", line 8, in script
-    init python:
-  File "D:\renpy-8.1.1-sdk\renpy\ast.py", line 1138, in execute
+  File "D:\renpy-7.0.0-sdk\renpy\bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-7.0.0-sdk\renpy\main.py", line 423, in main
+    renpy.game.context().run(node)
+  File "game/splash.rpy", line 2, in script
+    init -100 python:
+  File "D:\renpy-7.0.0-sdk\renpy\ast.py", line 862, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.1.1-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/advanced_scripts/script-poemgame.rpy", line 35, in <module>
-    full_wordlist[x[0]] = PoemWord(int(x[1]), int(x[2]), int(x[3]))
-  File "D:\renpy-8.1.1-sdk\renpy\revertable.py", line 97, in do_mutation
-    return method(self, *args, **kwargs)
-TypeError: list indices must be integers or slices, not str
+  File "D:\renpy-7.0.0-sdk\renpy\python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/splash.rpy", line 7, in <module>
+    renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
+  File "D:\renpy-7.0.0-sdk\renpy\exports.py", line 2242, in error
+    _error_handlers[-1](msg)
+  File "D:\renpy-7.0.0-sdk\renpy\exports.py", line 2227, in _error
+    raise Exception(msg)
+Exception: DDLC archive files not found in /game folder. Check installation and try again.
 
-Windows-7-6.1.7601-SP1 AMD64
-Ren'Py 8.1.1.23060707
-Doki Doki Metal Club 1.0
-Fri Jun  9 21:06:53 2023
+Windows-7-6.1.7601-SP1
+Ren'Py 7.0.0.196
+ 
+Fri Jun 09 23:23:53 2023

@@ -404,67 +404,64 @@ define gui.nvl_button_xalign = 0.0
 
 init python:
 
-    ## This increases the size of the quick buttons to make them easier to touch
-    ## on tablets and phones.
-    if renpy.variant("touch"):
 
+
+    if renpy.variant("touch"):
+        
         gui.quick_button_borders = Borders(30, 7, 30, 0)
 
-    ## This changes the size and spacing of various GUI elements to ensure they
-    ## are easily visible on phones.
-    if renpy.variant("small"):
 
-        ## Font sizes.
+
+    if renpy.variant("small"):
+        
+        
         gui.text_size = 20
         gui.name_text_size = 22
         gui.notify_text_size = 16
         gui.interface_text_size = 22
         gui.button_text_size = 24
         gui.label_text_size = 24
-
-        ## Adjust the location of the textbox.
-#        gui.textbox_height = 240
-#        gui.name_xpos = 80
-#        gui.text_xpos = 90
-#        gui.text_width = 1100
+        
+        
+        gui.textbox_height = 240
+        gui.name_xpos = 368
+        gui.name_ypos = 57
         gui.text_xpos = 268
-        gui.text_ypos = 62
+        gui.text_ypos = 112
         gui.text_width = 744
         gui.text_xalign = 0.0
-        # text alignment
-#        gui.text_xalign = 0.5
-
-        ## Change the size and spacing of items in the game menu.
+        
+        
         gui.choice_button_width = 1240
-
+        
         gui.navigation_spacing = 20
         gui.pref_button_spacing = 10
-
+        
         gui.history_height = 190
         gui.history_text_width = 690
-
-        ## File button layout.
+        
+        
         gui.file_slot_cols = 2
         gui.file_slot_rows = 2
-
-        ## NVL-mode.
+        
+        
         gui.nvl_height = 170
-
+        
         gui.nvl_name_width = 305
         gui.nvl_name_xpos = 325
-
+        
         gui.nvl_text_width = 915
         gui.nvl_text_xpos = 345
         gui.nvl_text_ypos = 5
-
+        
         gui.nvl_thought_width = 1240
         gui.nvl_thought_xpos = 20
-
+        
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-        ## Quick buttons.
-        gui.quick_button_text_size = 14
+        
+        
+        gui.quick_button_text_size = 18
 
 
     layout.ARE_YOU_SURE = _("Вы уверены?")

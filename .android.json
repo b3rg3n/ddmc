@@ -1,0 +1,1 @@
+{"layout": null, "package": "ru.bergen.ddmc", "include_pil": false, "numeric_version": "100", "expansion": false, "name": "Doki Doki Metal Club", "source": false, "icon_name": "Doki Doki Metal Club", "version": "1.0", "target_version": 14, "permissions": ["VIBRATE", "INTERNET"], "include_sqlite": false, "store": "none", "orientation": "sensorLandscape"}

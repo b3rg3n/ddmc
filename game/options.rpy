@@ -138,44 +138,8 @@ init python:
     # Classify files as None to exclusde them from the built distributions
     #
 
-    # packaged ZIP for distibution
-    build.package(build.directory_name + "Mod", 'zip', build.name, description='DDLC Compatible Mod')
 
-    # archives to create
-    build.archive("scripts", build.name)
-    build.archive("mod_assets", build.name)
-    build.archive("submods", build.name)
-
-    # folder / files to put in archives
-    build.classify("game/mod_assets/**", "mod_assets")
-    build.classify("game/submods/**", "submods")
-    build.classify('game/**.rpyc', "scripts")
-    build.classify('game/advanced_scripts/**', "scripts")
-    build.classify('game/original_story_scripts/**', "scripts")
-
-    # stuff to ignore
-    build.classify('**~', None)
-    build.classify('**.bak', None)
-    build.classify('**/.**', None)
-    build.classify('**/#**', None)
-    build.classify('**/thumbs.db', None)
-    build.classify('**.rpy', None)
-    build.classify('**.psd', None)
-    build.classify('**.sublime-project', None)
-    build.classify('**.sublime-workspace', None)
-    build.classify('/music/*.*', None)
-    build.classify('script-regex.txt', None)
-    build.classify('/game/10', None)
-    build.classify('/game/cache/*.*', None)
-    build.classify('**.rpa', None)
-
-    # stuff not in archive
-    build.classify('README.html', build.name)
-
-    # Doki Doki Mod Manager metadata file
-    build.classify('ddmm-mod.json', build.name)
-
-    # mark as documentation
-    build.documentation('README.html')
+    build.documentation('*.html')
+    build.documentation('*.txt')
 
     build.include_old_themes = False
