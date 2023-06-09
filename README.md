@@ -1,2 +1,4 @@
-# ddmc
- DDLC Mod Port
+# Doki Doki Metal Club Port
+Порт того самого мода.
+Перевод выполнен командой <<Team Анархисты>>.
+Порт сделал @b3rg3n.
