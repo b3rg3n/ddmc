@@ -1,0 +1,27 @@
+This is a scrapped ending, I decided to leave it here as an reaster egg lol
+
+n "Holy hell, that place is huge!"
+    m 2bl "Yeah, but we have only 100 tickets sold..."
+    s 2bc "Come on, guys!"
+    s "We might have a small crowd now, but I believe we'll play at Budokan some day!"
+    n 4bz "That's the spirit!"
+    "Some guy approaches us."
+    unkno "Helldoki?"
+    y 3bt "Uh... Yes, that's us..."
+    unkno "Your show starts at 20:00."
+    unkno "Come with me, we'll help you set out your equipment."
+    y "T-Thank you..."
+    show sayori at thide zorder 1
+    hide sayori
+    show natsuki at thide zorder 1
+    hide natsuki
+    show monika at thide zorder 1
+    hide monika
+    show yuri at thide zorder 1
+    hide yuri
+    "..."
+    "Our first live show..."
+    "Well, second, actually..."
+    "Goddamn..."
+    "I would've never thought that's what me joining the Metal Club will lead to..."
+    "..."

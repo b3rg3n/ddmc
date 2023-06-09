@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/advanced_scripts/script-poemgame.rpy", line 8, in script
+    init python:
+  File "game/advanced_scripts/script-poemgame.rpy", line 35, in <module>
+    full_wordlist[x[0]] = PoemWord(int(x[1]), int(x[2]), int(x[3]))
+TypeError: list indices must be integers or slices, not str
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/advanced_scripts/script-poemgame.rpy", line 8, in script
+    init python:
+  File "D:\renpy-8.1.1-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy-8.1.1-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/advanced_scripts/script-poemgame.rpy", line 35, in <module>
+    full_wordlist[x[0]] = PoemWord(int(x[1]), int(x[2]), int(x[3]))
+  File "D:\renpy-8.1.1-sdk\renpy\revertable.py", line 97, in do_mutation
+    return method(self, *args, **kwargs)
+TypeError: list indices must be integers or slices, not str
+
+Windows-7-6.1.7601-SP1 AMD64
+Ren'Py 8.1.1.23060707
+Doki Doki Metal Club 1.0
+Fri Jun  9 21:06:53 2023
